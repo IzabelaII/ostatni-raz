@@ -1,23 +1,33 @@
-﻿using System;
-using System.Net.NetworkInformation;
+﻿
+using System.Linq;
 
-string name = "Ewa";
-bool isWoman = true;
-int age = 30;
+///Przygotuj program, który policzy ile jakich cyfr występuje w podanej liczbie:
+///
+///Przykład:
+///Wyniki dla liczb: 4566
+///0=>0
+///1=>0
+///2=>0
+///3=>0
+///4=>1
+///5=>1
+///6=>2
+///7=>0
+///8=>0
+///9=>0
+int number = 4566;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
 
-if (isWoman == true && age < 30)
+Console.WriteLine("podaj liczbe:");
+int liczba = 4566;
+char[] litera = numberInString.addition;
+
+for (int i = 0; i < liczba; i++)
 {
-    Console.WriteLine("Kobieta poniżej 30 lat.");
+    if (true)
+    {
+        liczba = liczba + 1;
+    }
 }
-else if (name == "Ewa" && age == 30)
-{
-    Console.WriteLine("Ewa, lat 30");
-}
-else if (!isWoman && age < 18)
-{
-    Console.WriteLine("Niepełnoletni mężczyzna");
-}
-else
-{
-    Console.WriteLine("NIC");
-}
+Console.WriteLine(liczba + " => " + 1);
