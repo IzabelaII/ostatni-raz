@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.Design;
+using System.Diagnostics.Metrics;
 using System.Linq;
 
 ///Przygotuj program, który policzy ile jakich cyfr występuje w podanej liczbie:
@@ -16,18 +18,61 @@ using System.Linq;
 ///8=>0
 ///9=>0
 int number = 4566;
-string numberInString = number.ToString();
-char[] letters = numberInString.ToArray();
+string numberAsString = number.ToString("4566");
+char[] letters = numberAsString.ToArray('4', '5', '6', '6');
 
 Console.WriteLine("podaj liczbe:");
-int liczba = 4566;
-char[] litera = numberInString.addition;
-
-for (int i = 0; i < liczba; i++)
+int couter0 = 0; ;
+int couter1 = 0;
+int couter2 = 0;
+int couter3 = 0;
+int couter4 = 0;
+int couter5 = 0;
+int couter6 = 0;
+int couter7 = 0;
+int couter8 = 0;
+int couter9 = 0;
+foreach (char letter in letters)
 {
-    if (true)
+    if (letter == 0)
     {
-        liczba = liczba + 1;
+        Console.WriteLine(couter0++);
+    }
+    else if (letter == 1)
+    {
+        Console.WriteLine(couter1++);
+    }
+    else if (letter == 2)
+
+    {
+        Console.WriteLine(couter2++);
+    }
+    else if (letter == 3)
+    {
+        Console.WriteLine(couter3++);
+    }
+    else if (letter == 4)
+    {
+        Console.WriteLine(couter4++);
+    }
+    else if (letter == 5)
+    {
+        Console.WriteLine(couter5++);
+    }
+    else if (letter == 6)
+    {
+        Console.WriteLine(couter6++);
+    }
+    else if (letter == 7)
+    {
+        Console.WriteLine(couter7++);
+    }
+    else if (letter == 8)
+    {
+        Console.WriteLine(couter8++);
+    }
+    else if (letter == 9)
+    {
+        Console.WriteLine(couter9++);
     }
 }
-Console.WriteLine(liczba + " => " + 1);
