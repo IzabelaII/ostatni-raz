@@ -1,88 +1,41 @@
-﻿
-using System.ComponentModel.Design;
-using System.Diagnostics.Metrics;
-using System.Linq;
+﻿User user1 = new User("Ada","1975");
+User user2 = new User("Monika","1975");
+User user3 = new User("Zuza","1975");
+User user4 = new User("Damian","1975");
 
-///Przygotuj program, który policzy ile jakich cyfr występuje w podanej liczbie:
-///
-///Przykład:
-///Wyniki dla liczb: 4566
-///0=>0
-///1=>0
-///2=>0
-///3=>0
-///4=>1
-///5=>1
-///6=>2
-///7=>0
-///8=>0
-///9=>0
-int number = 4566;
-string numberAsString = number.ToString();
-char[] letters = numberAsString.ToArray();
-
-int couter0 = 0; ;
-int couter1 = 0;
-int couter2 = 0;
-int couter3 = 0;
-int couter4 = 0;
-int couter5 = 0;
-int couter6 = 0;
-int couter7 = 0;
-int couter8 = 0;
-int couter9 = 0;
-foreach (char letter in letters)
+user1.AddScore(5);
+user1.AddScore(2);
+int result = user1.Result;
+Console.WriteLine(result);
+string name = User.GameName;
+Console.WriteLine(name);
+class User
 {
-    if (letter == '0')
-    {
-        couter0++;
-    }
-    else if (letter == '1')
-    {
-        couter1++;
-    }
-    else if (letter == '2')
 
+    public static string GameName = "Diablo";
+    private List<int> score = new List<int>();
+
+    public User(string login, string password)
     {
-        couter2++;
+        this.Login = login;
+        this.Password = password;
+
     }
-    else if (letter == '3')
+    public string Login { get; private set; }
+    public string Password { get; private set; }
+    public int Result
     {
-        couter3++;
+        get
+        {
+            return this.score.Sum();
+        }
     }
-    else if (letter == '4')
+    public void AddScore(int number) 
     {
-        couter4++;
+        this.score.Add(number);
+
     }
-    else if (letter == '5')
-    {
-        couter5++;
-    }
-    else if (letter == '6')
-    {
-        couter6++;
-    }
-    else if (letter == '7')
-    {
-        couter7++;
-    }
-    else if (letter == '8')
-    {
-        couter8++;
-    }
-    else if (letter == '9')
-    {
-        couter9++;
-    }
+    
+
 }
-Console.WriteLine("wynik dla liczby;" + number);
-Console.WriteLine("0 =>" + couter0);
-Console.WriteLine("1 =>" + couter1);
-Console.WriteLine("2 =>" + couter2);
-Console.WriteLine("3 =>" + couter3);
-Console.WriteLine("4 =>" + couter4);
-Console.WriteLine("5 =>" + couter5);
-Console.WriteLine("6 =>" + couter6);
-Console.WriteLine("7 =>" + couter7);
-Console.WriteLine("8 =>" + couter8);
-Console.WriteLine("9 =>" + couter9);
+
