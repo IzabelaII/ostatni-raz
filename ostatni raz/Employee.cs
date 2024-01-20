@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ostatni_raz;
 
 namespace ostatni_raz
 {
@@ -11,7 +12,7 @@ namespace ostatni_raz
         public List<Employee> employees = new List<Employee>();
         public int maxResult = -1;
         Employee employeeWithMaxResult = null;
-
+        
 
         private List<int> score = new List<int>();
         private string name;
@@ -24,7 +25,7 @@ namespace ostatni_raz
                 return this.score.Sum();
             }
         }
-        public Employee( string name, string surname, int age)
+        public Employee(string name, string surname, int age)
         {
             this.score = score;
             this.Name = name;
@@ -45,14 +46,4 @@ namespace ostatni_raz
 
         }
     }
-
-
-
-foreach (int Employee Result in Employees Results)
-{
-    if (Employee Result > employeeWithMaxResult)
-     {
-        employeeWithMaxResult = employee;
-    }
 }
-Console.WriteLine($"Najwyższą oceną pracownika" employeeWithMaxResult "z wielością"maxResult);
