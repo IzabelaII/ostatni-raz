@@ -1,6 +1,8 @@
 ﻿
 
 
+using ostatni_raz;
+
 Employee employee1 = new Employee("Ada", "Gruszka", 33);
 employee1.AddScore(5);
 employee1.AddScore(2);
@@ -22,6 +24,22 @@ employee3.AddScore(9);
 employee3.AddScore(6);
 employee3.AddScore(4);
 
-List<string> Eployee = new List<string>();
-List<int> Result = new List<int>();
-Console.WriteLine("Najlepszym pracownikiem jest"+ nameof best empolyee + surname best employee + age best employee + "z wynikiem"+ best result)
+
+List<Employee> employees = new List<Employee>() { employee1, employee2, employee3 };
+int maxResult = -1;
+int result = 0;
+Employee employeeWithMaxResult = null;
+foreach (var employee in employees)
+{
+    if (employee.Result > maxResult)
+    {
+        employeeWithMaxResult = employee;
+        maxResult = employee.Result;
+    }
+        
+}
+
+
+
+
+Console.WriteLine("Najlepszym pracownikiem jest"  +  employeeWithMaxResult  +  "z wynikiem" +  maxResult);
