@@ -14,10 +14,10 @@ namespace ostatni_raz
         Employee employeeWithMaxResult = null;
         
 
-        private List<int> score = new List<int>();
-        private string name;
-        private string surname;
-        private int age;
+        public List<int> score = new List<int>();
+        public string name;
+        public string surname;
+        public int age;
         public int Result
         {
             get
