@@ -1,20 +1,19 @@
-﻿var name = "Adam";
-var age = 15;
-var isMan = true;
+﻿int[] grades = new int[365];
+string[] dayOfWeeks = new string[7];
+dayOfWeeks[0] = "poniedziałek";
+dayOfWeeks[1] = "wtorek";
+dayOfWeeks[2] = "środa";
+dayOfWeeks[3] = "czwartek";
+dayOfWeeks[4] = "piątek";
+dayOfWeeks[5] = "sobota";
+dayOfWeeks[6] = "niedziela";
+Console.WriteLine(dayOfWeeks[2]);
 
-if (!isMan && age < 30)
+string[] dayOfWeeks2 = { "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela" };
+Console.WriteLine(dayOfWeeks2[0]);
+
+for (int i = 0; i < 10; i = i + 1)
 {
-    Console.WriteLine("Kobieta po niżej 30 lat.");
+    Console.WriteLine(i);
 }
-else if (name == "Ewa" && age == 30)
-{
-    Console.WriteLine("Ewa , lat 30");
-}
-else if (isMan && age < 18)
-{
-    Console.WriteLine("Niepenoletni męszczyzna");
-}
-else
-{
-    Console.WriteLine("NIC");
-}
+
