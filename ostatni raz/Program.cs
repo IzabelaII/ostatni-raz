@@ -1,73 +1,39 @@
-﻿int number = 4594;
-string numberAsString = number.ToString();
-char[] chars = numberAsString.ToCharArray();
-List<char> namberOfNambers = new List<char>(10);
-int number0 = 0;
-int number1 = 0;
-int number2 = 0;
-int number3 = 0;
-int number4 = 0;
-int number5 = 0;
-int number6 = 0;
-int number7 = 0;
-int number8 = 0;
-int number9 = 0;
+﻿
 
-foreach (char leter in chars) 
+using ostatni_raz;
+
+Employee employee1 = new Employee("Adam","Gruszka",18);
+Employee employee2 = new Employee("Zuza", "Jabłko", 32);
+Employee employee3 = new Employee("Damian", "Wiśnia", 28);
+
+employee1.AddScore(9);
+employee1.AddScore(9);
+employee1.AddScore(9);
+employee1.AddScore(9);
+employee1.AddScore(9);
+
+employee2.AddScore(6);
+employee2.AddScore(3);
+employee2.AddScore(9);
+employee2.AddScore(1);
+employee2.AddScore(9);
+
+employee3.AddScore(7);
+employee3.AddScore(7);
+employee3.AddScore(7);
+employee3.AddScore(7);
+employee3.AddScore(7);
+
+
+int maxResult = -1;
+Employee employeeWithMaxResult = null;
+
+foreach (var employee in employees)
 {
-    if (leter == '0')
+    if (employee.Result > maxResult) 
     {
-        number0++;
-    }
-    else if (leter == '1') 
-    {
-        number1++;
-    }
-    else if (leter == '2')
-    {
-        number2++;
-    }
-    else if (leter == '3')
-    {
-        number3++;
-    }
-    else if (leter == '4')
-    {
-        number4++;
-    }
-    else if (leter == '5')
-    {
-        number5++;
-    }
-    else if (leter == '6')
-    {
-        number6++;
-    }
-    else if (leter == '7')
-    {
-        number7++;
-    }
-    else if (leter == '8')
-    {
-        number8++;
-    }
-    else if (leter == '9')
-    {
-        number9++;
+        employeeWithMaxResult = employee;
     }
 }
 
-
- 
-Console.WriteLine("Wyniki dla numeru:4594");
-Console.WriteLine($"0=> {number0}");
-Console.WriteLine($"1=> {number1}");
-Console.WriteLine($"2=> {number2}");
-Console.WriteLine($"3=> {number3}");
-Console.WriteLine($"4=> {number4}");
-Console.WriteLine($"5=> {number5}");
-Console.WriteLine($"6=> {number6}");
-Console.WriteLine($"7=> {number7}");
-Console.WriteLine($"8=> {number8}");
-Console.WriteLine($"9=> {number9}");
-
+Console.WriteLine("maxResult"+ "należy do"+ "employeeWithMaxResult.name"+ "employeeWithMaxResult.surname"+ "employeeWithMaxResult.age");
