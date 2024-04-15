@@ -20,6 +20,7 @@ namespace ostatni_raz
             {
                 return this.score.Sum();
             }
+
         }
         public void AddScore(int number)
         {
