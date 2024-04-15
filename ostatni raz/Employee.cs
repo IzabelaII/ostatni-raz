@@ -4,8 +4,7 @@ namespace ostatni_raz
 {   
     public class Employee
     {
-        public List<Employee> employees = new List<Employee>() {};
-        private List<int> score = new List<int>();
+        List<int> score = new List<int>();
         public Employee(string name, string surname , int age)
         {
             this.Name = name;

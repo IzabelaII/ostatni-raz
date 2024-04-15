@@ -3,7 +3,7 @@ namespace ostatni_raz
 {
     public class User
     {
-        private List<int> score = new List<int>();
+        List<int> score = new List<int>();
         public User(string login, string password)
         {
             this.Login = login;
