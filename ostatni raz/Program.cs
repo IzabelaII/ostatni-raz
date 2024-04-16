@@ -45,7 +45,7 @@ foreach (var employee in employees)
 }
 
 Console.WriteLine("Pracownik z największą ilością punktów to:" );
-Console.WriteLine("Imie:"+ employeeWithMaxResult.Name + "");
+Console.WriteLine("Imie:" + employeeWithMaxResult.Name+ "");
 Console.WriteLine("Nazwisko:" + employeeWithMaxResult.Surname + "");
 Console.WriteLine("Wiek:" + employeeWithMaxResult.Age + "" +"lat");
 Console.WriteLine("Ilość zdobytych punktów to:");
