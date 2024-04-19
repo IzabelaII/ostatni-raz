@@ -1,6 +1,6 @@
 namespace ostatni_raz.test
 {
-    public class Tests
+    public class EmployeeTests
     {
 
 
