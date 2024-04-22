@@ -6,7 +6,7 @@ namespace ostatni_raz.test
     public class TypeTests
     {
         [Test]
-        public void TEST()
+        public void GetNumberReturnDefferentObjects()
         {
             // arrange
            int number1 = 1;
@@ -16,11 +16,11 @@ namespace ostatni_raz.test
 
 
             // assert
-            Assert.AreEqual(number1, number2);
+            Assert.AreNotEqual(number1, number2);
 
         }
         [Test]
-        public void GetUserReturnDefferent()
+        public void GetUserReturnDefferentObjects()
         {
             // arrange
             var user1 = GetUser("Adam","a");
