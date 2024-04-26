@@ -13,12 +13,12 @@ namespace ostatni_raz.test
             // arrange
             var employee = new Employee("Adam", "Nowak");
             employee.AddGrade(2);
-            employee.AddGrade(2);
-            employee.AddGrade(6);
+            employee.AddGrade(5);
+            employee.AddGrade(3);
             // act
-            statistics = new Statistics();
+            var statistics = employee.GetStatistics();
             // assert
-            Assert.AreEqual(3, statistics.Average);
+            Assert.AreEqual(3.33333325f, statistics.Average);
 
         }
         [Test]
@@ -27,10 +27,10 @@ namespace ostatni_raz.test
             // arrange
             var employee = new Employee("Adam", "Nowak");
             employee.AddGrade(2);
-            employee.AddGrade(2);
-            employee.AddGrade(6);
+            employee.AddGrade(5);
+            employee.AddGrade(3);
             // act
-            statistics = new Statistics();
+            var statistics = employee.GetStatistics();
             // assert
             Assert.AreEqual(2, statistics.Min);
 
@@ -41,12 +41,12 @@ namespace ostatni_raz.test
             // arrange
             var employee = new Employee("Adam", "Nowak");
             employee.AddGrade(2);
-            employee.AddGrade(2);
-            employee.AddGrade(6);
+            employee.AddGrade(5);
+            employee.AddGrade(3);
             // act
-            statistics = new Statistics();
+            var statistics = employee.GetStatistics();
             // assert
-            Assert.AreEqual(6, statistics.Max);
+            Assert.AreEqual(5, statistics.Max);
 
         }
     }
